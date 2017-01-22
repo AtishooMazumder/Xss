@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using xss.Web.Models;
+using System.Web.Hosting;
 
 namespace xss.Web
 {
@@ -54,15 +55,16 @@ namespace xss.Web
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "200717470397399",
+               appSecret: "d3fb8ed09af663d2838e175fd9efa1b7");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "894184711785-88uud76o016ijjo2alsmlt1pqc5487us.apps.googleusercontent.com",
+                ClientSecret = "ORtex1vFSEYeExOhUiRL08as"
+            });
         }
+
     }
 }
